@@ -1,0 +1,92 @@
+@use 'variables' as*;
+
+// ヘッダー
+header {
+  background-color: none;
+  color: $mainColor1;
+  padding: 10px 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+}
+
+
+/* ハンバーガーボタンのスタイル */
+.hamburger {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  cursor: pointer;
+  z-index: 20;
+  padding-top: 10px;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: $mainColor1;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+/* バツ印に変化するスタイル */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* メニューのスタイル */
+.menu {
+  position: fixed;
+  top: -100%; /* 初期状態でメニューを画面の外に */
+  right: 0;
+  width: 250px;
+  height: 350px;
+  background-color: $secondary-color;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 5;
+  transition: top 0.3s ease; /* スライドアニメーション */
+
+  ul {
+    list-style: none; /* リストのスタイルを削除 */
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    /* 縦並びにするためにdisplay: block;を追加 */
+    display: block;
+    margin-top: 80px;
+    margin-bottom: 25px; /* 各項目の間隔 */
+  }
+
+  a {
+    display: block; /* リンクをブロック要素にする */
+    text-decoration: none; /* リンクの下線を削除 */
+    font-size: 16px;
+    color: $mainColor1; /* リンクの色 */
+  }
+}
+
+/* メニューが表示される時 */
+.menu.open {
+  top: 0; /* メニューが表示される位置 */
+}

@@ -1,0 +1,201 @@
+@use 'variables' as*;
+@use 'header' as*;
+@use 'footer' as*;
+@use 'btn' as*;
+@use 'common' as*;
+
+
+
+// 全体的なスタイル
+body {
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  background-color: $baseColor1;
+  color: $mainColor1;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+
+// メインコンテンツ
+main {
+  padding: 10px 0;
+
+  section {
+    margin-bottom: 40px;
+
+    h2 {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+  }
+
+  // ヒーローセクション
+.hero{
+    width: 100%;
+    height: 100dvh;
+    background: url("../img/SHINO.jpg") center center no-repeat;
+    background-size: cover;
+}
+
+
+  // ワークセクション
+  #works {
+    .container{
+        margin-top: 120px;
+        margin-bottom: 40px;
+    }
+
+    .works-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+
+        .work-item {
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: center;
+
+            img {
+                max-width: 100%;
+                height: auto;
+                margin-bottom: 10px;
+            }
+        }   
+    }
+}
+
+// imageエリア
+.long-img{
+    position: relative; /* 疑似要素を配置するための基準 */
+    width: 100%;
+    height: 250px;
+    background: url("../img/20240708_140503.jpg") center center no-repeat;
+    background-size: cover;
+    margin-top: 120px;
+    overflow: hidden; /* はみ出した部分を隠す */
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(108, 108, 108, 0.251); /* スモークの色と透明度 */
+        z-index: 1; /* 画像の上に重ねる */
+    }
+}
+
+
+
+
+#about {
+  .container {
+    max-width: 1200px; /* 例：コンテナの最大幅 */
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 120px;
+
+    .about-title {
+      text-align: center;
+      margin-bottom: 20px; /* タイトルの下の余白 */
+    }
+
+    .about-content {
+      display: flex; /* 横並びにする */
+      align-items: center; /* 縦方向中央揃え */
+      gap: 20px; /* descriptionとphotoの間の余白 */
+
+      .about-description {
+        flex: 1; /* descriptionが伸びるように */
+        h3{
+            font-size: 32px;
+            margin-bottom: 30px; 
+        }
+        p{
+            letter-spacing: 2px;
+        }
+        
+        
+      }
+
+      .about-photo {
+        flex: 1; /* photoが伸びるように */
+        img {
+          width: 100%; /* 写真の幅をコンテナに合わせる */
+          height: auto;
+          border-radius: 5px; /* 角を丸くする（お好みで） */
+        }
+      }
+    }
+  }
+}
+
+
+
+  // コンタクトセクション
+  #contact {
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin: 0 auto;
+
+      label {
+        margin-bottom: 5px;
+      }
+
+      input,
+      textarea {
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      button {
+        background-color: $accent-color;
+        color: $secondary-color;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: darken($accent-color, 10%);
+        }
+      }
+    }
+  }
+}
+
+
+// レスポンシブデザイン
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  header .container {
+    flex-direction: column;
+    align-items: center;
+
+    nav ul {
+      margin-top: 10px;
+      flex-direction: column;
+      align-items: center;
+
+      li {
+        margin: 5px 0;
+      }
+    }
+  }
+}

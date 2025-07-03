@@ -1,0 +1,9 @@
+@use 'variables' as*;
+
+// フッター
+footer {
+  background-color: $primary-color;
+  color: $secondary-color;
+  text-align: center;
+  padding: 10px 0;
+}
