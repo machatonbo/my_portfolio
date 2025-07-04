@@ -26,3 +26,56 @@ $(function() {
     $(this).toggleClass('active');
   });
 });
+
+gsap.fromTo(
+    ".works-grid",
+        1,
+        {
+            y: 50,
+            opacity: 0
+        },
+        {
+            y: 0,
+            opacity: 1,
+            scrollTrigger: {
+                trigger: ".work-item",
+                start: "top center",
+                markers: false
+            }
+        }
+)
+
+gsap.fromTo(
+    ".about-description",
+        1,
+        {
+            x: -100,
+            opacity: 0
+        },
+        {
+            x: 0,
+            opacity: 1,
+            scrollTrigger: {
+                trigger: ".about-description",
+                start: "top center",
+                markers: false
+            }
+        }
+)
+gsap.fromTo(
+    ".about-photo",
+        1,
+        {
+            x: 100,
+            opacity: 0
+        },
+        {
+            x: 0,
+            opacity: 1,
+            scrollTrigger: {
+                trigger: ".about-photo",
+                start: "center center",
+                markers: false
+            }
+        }
+)
