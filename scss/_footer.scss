@@ -1,9 +1,14 @@
-@use 'variables' as*;
+@use 'variables' as *;
 
-// フッター
-footer {
-  background-color: $primary-color;
-  color: $secondary-color;
-  text-align: center;
-  padding: 10px 0;
+.footer{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background-color: $mainColor1;
+
+    &__copyright{
+        color: $textColor1;
+    }
 }

@@ -1,132 +1,152 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Portfolio</title>
-<!-- Reset CSS CDN -->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.1/destyle.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my_portfolio</title>
+    
+    <!-- Reset CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.1/destyle.min.css">
 
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-<!-- Font Awesome CDN-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
 </head>
 <body>
-
-  <header>
-    <div class="container">
-        <h1>Shino デザイン製作所</h1>
-        <!-- ハンバーガーメニュー -->
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-        <nav class="menu">
-            <ul>
-            <li><a href="#works">制作事例</a></li>
-            <li><a href="#about">私について</a></li>
-            <li><a href="#contact">お問い合わせ</a></li>
+    <header class="header">
+        <h1 class="header-name">SHINOデザイン製作所</h1>
+        <nav class="nav">
+            <ul class="nav-menu">
+                <li class="nav-menu__linK"><a href="#concept">CONCEPT</a></li>
+                <li class="nav-menu__linK"><a href="#works">WORKS</a></li>
+                <li class="nav-menu__linK"><a href="#about me">ABOUT ME</a></li>
+                <li class="nav-menu__linK"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
             </ul>
+            <a href="#" class="btn btn--fill">
+                <i class="fa-regular fa-envelope"></i>
+                <p>お問い合わせ</p>
+            </a>
         </nav>
-
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="script.js"></script>
-    </div>
-</header>
+        <!-- <div class="ham">
+            <div class="ham-icon">
+                <div class="ham__border"></div>
+                <div class="ham__border"></div>
+                <div class="ham__border"></div>
+            </div>
+            <p class="ham__menu">MENU</p>
+        </div> -->
+    </header>
 
 <main>
-    <!-- heroエリア -->
-    <div class="hero"></div>
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Shino portfolio</h1>
+            <p>WEB/LP Design</p>
+        </div>
+    </div>
 
-    <!-- worksエリア -->
-    <section id="works">
-        <div class="container">
-            <h2>Works</h2>
-            <div class="works-grid">
-                <div class="work-item">
-                    <img src="img/design1.jpg" alt="Work 1">
-                    <h3>WEBサイトデザイン</h3>
-                    <p>Work Description 1</p>
+    <section id="concept" class="section concept">
+        <div class="contents-container">
+            <div class="section-head section-head__brown">
+                <h2 class="section-head__ja">目的</h2>
+                <h2 class="section-head__en">CONCEPT</h2>
+            </div>
+            <div class="concept-text">
+                <h3 class="concept-text__head">綺麗なだけじゃない。成長するサイトへ</h3>
+                <p class="concept-text__text">あなたのサイトを修正したします。利用者に合わせたデザインへ</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="works" class="section works">
+        <div class="section-head section-head__brown">
+            <h2 class="section-head__ja">制作事例</h2>
+            <h2 class="section-head__en">WORKS</h2>
+        </div>
+        <div class="contents-container">
+        <div class="works-items">
+            <article class="works-article">
+                <a href="#">
+                    <div class="pictuer-frame">
+                        <img src="img/design1.jpg" alt="サムネイル画像" class="works-article__img">
+                    </div>
+                    <h3 class="works-article__title">WEBサイトデザイン</h3>
+                    <p class="works-article__excerpt">イメージを形に</p>
+                </a>
+            </article>
+            <article class="works-article">
+                <a href="#">
+                    <div class="pictuer-frame">
+                        <img src="img/design2.jpg" alt="サムネイル画像" class="works-article__img">
+                    </div>
+                    <h3 class="works-article__title">LPページ作成</h3>
+                    <p class="works-article__excerpt">リピートするLPページ</p>
+                </a>
+            </article>
+            <article class="works-article">
+                <a href="#">
+                    <div class="pictuer-frame">
+                        <img src="img/design3.jpg" alt="サムネイル画像" class="works-article__img">
+                    </div>
+                    <h3 class="works-article__title">バナー制作</h3>
+                    <p class="works-article__excerpt">伝える広告</p>
+                </a>
+            </article>
+        </div>
+        </div>
+        <a href="#" class="btn btn--stroke">
+            <p>View more.</p>
+        </a>
+    </section>
+    
+    <section id="about" class="section-about">
+        <div class="contents-container">
+            <div class="section-head section-head__brown">
+                <h2 class="section-head__ja">私について</h2>
+                <h2 class="section-head__en">About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="column-left">
+                    <h3 class="about-content__head">SHINO（しの）</h3>
+                    <p class="about-content__text">
+                        今治市在住<br>
+                        気になることを極めたいと思いスクールで勉強。
+                        </p>
+                        <p class="about-content__text">
+                        「デザインはおしゃれなだけではない！」<br>
+                        思いを形にすることを大事にしています！
+                        </p>
+                        <p class="about-content__text">
+                        WEBデザインスクール卒業<br>
+                        プログラミングスクール卒業
+                        </p>
                 </div>
-                <div class="work-item">
-                    <img src="img/design2.jpg" alt="Work 2">
-                    <h3>LPページデザイン</h3>
-                    <p>Work Description 2</p>
-                </div>
-                <div class="work-item">
-                    <img src="img/design3.jpg" alt="Work 3">
-                    <h3>バナーデザイン</h3>
-                    <p>Work Description 3</p>
-                </div>
-                <div class="button_solid002">
-                    <a href="#">View More</a>
+                <div class="column-right">
+                    <img src="img/profile.jpg" alt="プロフィール写真" class="column-right__photo">
                 </div>
             </div>
         </div>
     </section>
 
+    <section id="space" class="section-space"></section>
 
-　　　<!-- 横長画像エリア -->
-　　　<div class="long-img"></div>
-
-<!-- aboutエリア -->
-<section id="about">
-  <div class="container about-container">
-    <div class="about-title">
-      <h2>About Me</h2>
+    <div class="contact">
+        <p class="contact__message">ご相談はお気軽にお問い合わせください</p>
+            <a href="#" class="btn btn--fill">
+                <i class="fa-regular fa-envelope"></i>
+                <p>お問い合わせ</p>
+            </a>
     </div>
-    <div class="about-content">
-      <div class="about-description">
-        <h3>SHINO（しの）</h3>
-        <p>今治市在住<br>
-          気になることを極めたいと思いスクールで勉強。<br>
-          「デザインはおしゃれなだけではない！」<br>
-          思いを形にすることを大事にしています！<br>
-          <br>
-          WEBデザインスクール卒業<br>
-          プログラミングスクール卒業</p>
-      </div>
-      <div class="about-photo">
-        <img src="img/profile.jpg" alt="プロフィール写真">
-      </div>
-    </div>
-  </div>
-</section>
+
+    <footer class="footer">
+        <p class="footer__copyright"> ©️ SHINOデザイン製作所</p>
+    </footer>
 
 
-
-
-    <!-- CONTACTエリア -->
-    <section id="contact">
-      <div class="container">
-        <h2>Contact</h2>
-        <form action="#" method="post">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email">
-          <label for="message">Message</label>
-          <textarea id="message" name="message"></textarea>
-          <button type="submit">Send</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Your Name</p>
-    </div>
-  </footer>
-  <!-- GSAP -->
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-  <script src="js/script.js"></script>
+</main>
 </body>
 </html>

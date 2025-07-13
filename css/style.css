@@ -1,126 +1,16 @@
-@charset "UTF-8";
-header {
-  background-color: none;
-  color: #06344F;
-  padding: 10px 0;
-}
-header .container {
+.header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-}
-header h1 {
-  font-size: 24px;
-  margin: 0;
-}
-
-/* ハンバーガーボタンのスタイル */
-.hamburger {
   position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 30px;
-  cursor: pointer;
-  z-index: 20;
-  padding-top: 10px;
-}
-
-.hamburger span {
-  display: block;
-  height: 3px;
   width: 100%;
-  background-color: #06344F;
-  margin: 5px 0;
-  transition: 0.4s;
+  height: 120px;
+  padding: 0 40px;
 }
-
-/* バツ印に変化するスタイル */
-.hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
-}
-
-/* メニューのスタイル */
-.menu {
-  position: fixed;
-  top: -100%; /* 初期状態でメニューを画面の外に */
-  right: 0;
-  width: 250px;
-  height: 350px;
-  background-color: #eee;
-  padding: 20px;
-  box-sizing: border-box;
-  z-index: 5;
-  transition: top 0.3s ease; /* スライドアニメーション */
-}
-.menu ul {
-  list-style: none; /* リストのスタイルを削除 */
-  padding: 0;
-  margin: 0;
-}
-.menu li {
-  /* 縦並びにするためにdisplay: block;を追加 */
-  display: block;
-  margin-top: 80px;
-  margin-bottom: 25px; /* 各項目の間隔 */
-}
-.menu a {
-  display: block; /* リンクをブロック要素にする */
-  text-decoration: none; /* リンクの下線を削除 */
-  font-size: 16px;
-  color: #06344F; /* リンクの色 */
-}
-
-/* メニューが表示される時 */
-.menu.open {
-  top: 0; /* メニューが表示される位置 */
-}
-
-footer {
-  background-color: #333;
-  color: #eee;
-  text-align: center;
-  padding: 10px 0;
-}
-
-.button_solid002 a {
-  position: relative;
+.header .nav {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0 auto;
-  max-width: 240px;
-  padding: 10px 25px;
-  color: #FFF;
-  transition: 0.3s ease-in-out;
-  font-weight: 600;
-  background: #06344F;
-  filter: drop-shadow(0px 2px 4px #ccc);
-  border-radius: 3px;
-  border-radius: 50px;
-}
-
-.button_solid002 a:after {
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transition: 0.2s ease-in-out;
-  content: "\f0da";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  transform: translateY(-50%);
-}
-
-.button_solid002 a:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.15), 0 0 5px rgba(0, 0, 0, 0.1);
+  -moz-column-gap: 32px;
+       column-gap: 32px;
 }
 
 body {
@@ -153,150 +43,238 @@ li {
   margin: 0 auto;
 }
 
-body {
-  font-family: "Noto Sans JP", sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #F9F6F0;
+.footer {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  background-color: #06344F;
+}
+.footer__copyright {
+  color: #FFEB86;
+}
+
+.section-head {
+  margin-bottom: 96px;
+}
+.section-head__ja {
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: 600;
+}
+.section-head--brown {
+  color: #635058;
+}
+.section-head__bule {
   color: #06344F;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+.nav-menu {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
 }
 
-main {
-  padding: 10px 0;
+.fa-instagram {
+  font-size: 24px;
 }
-main section {
-  margin-bottom: 40px;
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 4px;
+       column-gap: 4px;
+  height: 48px;
+  width: 212px;
+  border-radius: 4px;
+  font-family: "Noto Sans JP";
 }
-main section h2 {
-  margin-bottom: 20px;
-  text-align: left;
+.btn .fa-envelope {
+  margin-top: 2px;
+  font-size: 16px;
 }
-main .hero {
+.btn--fill {
+  background-color: #06344F;
+  color: #F8D6BD;
+}
+.btn--stroke {
+  border: 1px solid #06344F;
+  background-color: #F9F6F0;
+  color: #06344F;
+  font-size: 24px;
+}
+
+.hero {
+  position: relative;
   width: 100%;
   height: 100dvh;
-  background: url("../img/SHINO.jpg") center center no-repeat;
+  background: url(../img/namroud-gorguis-FZWivbri0Xk-unsplash.jpg);
   background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-main #works .container {
-  margin-top: 120px;
-  margin-bottom: 40px;
-}
-main #works .works-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-main #works .works-grid .work-item {
-  border: 1px solid #ccc;
-  padding: 20px;
-  text-align: center;
-}
-main #works .works-grid .work-item img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
-main .long-img {
-  position: relative; /* 疑似要素を配置するための基準 */
-  width: 100%;
-  height: 250px;
-  background: url("../img/image_Photo.jpg") center center no-repeat;
-  background-size: cover;
-  margin-top: 120px;
-  overflow: hidden; /* はみ出した部分を隠す */
-}
-main .long-img::before {
+.hero::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.474); /* スモークの色と透明度 */
-  z-index: 1; /* 画像の上に重ねる */
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
 }
-main #about .container {
-  max-width: 1200px; /* 例：コンテナの最大幅 */
-  margin: 0 auto;
-  padding: 20px;
-  margin-top: 120px;
-}
-main #about .container .about-title {
+.hero-text {
+  position: relative;
+  z-index: 2;
   text-align: center;
-  margin-bottom: 20px; /* タイトルの下の余白 */
+  display: block;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  margin-bottom: 45px;
 }
-main #about .container .about-content {
-  display: flex; /* 横並びにする */
-  align-items: center; /* 縦方向中央揃え */
-  gap: 20px; /* descriptionとphotoの間の余白 */
+.hero-text h1, .hero-text p {
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
 }
-main #about .container .about-content .about-description {
-  flex: 1; /* descriptionが伸びるように */
+.hero-text h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+  font-weight: bold;
 }
-main #about .container .about-content .about-description h3 {
+.hero-text p {
   font-size: 24px;
-  margin-bottom: 30px;
-}
-main #about .container .about-content .about-description p {
-  letter-spacing: 2px;
-}
-main #about .container .about-content .about-photo {
-  flex: 1; /* photoが伸びるように */
-}
-main #about .container .about-content .about-photo img {
-  width: 100%; /* 写真の幅をコンテナに合わせる */
-  height: auto;
-  border-radius: 5px; /* 角を丸くする（お好みで） */
-}
-main #contact form {
-  display: flex;
-  flex-direction: column;
-  max-width: 500px;
-  margin: 0 auto;
-}
-main #contact form label {
-  margin-bottom: 5px;
-}
-main #contact form input,
-main #contact form textarea {
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-main #contact form button {
-  background-color: #007bff;
-  color: #eee;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-main #contact form button:hover {
-  background-color: #0062cc;
+  font-weight: bold;
 }
 
-@media (max-width: 768px) {
-  .container {
-    padding: 10px;
-  }
-  header .container {
-    flex-direction: column;
-    align-items: center;
-  }
-  header .container nav ul {
-    margin-top: 10px;
-    flex-direction: column;
-    align-items: center;
-  }
-  header .container nav ul li {
-    margin: 5px 0;
-  }
+.concept {
+  background: #F9F6F0;
+}
+.concept .section-head {
+  margin-bottom: 216px;
+}
+.concept .concept-text {
+  text-align: center;
+}
+.concept .concept-text__head {
+  margin-bottom: 160px;
+}
+
+.workssection {
+  padding-bottom: 0;
+}
+.works .section-head {
+  text-align: center;
+}
+.works-items {
+  display: flex;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  margin-bottom: 96px;
+}
+.works-article {
+  width: 33.3333333333%;
+  font-family: "Noto Sans JP";
+}
+.works-article .pictuer-frame {
+  width: 100%;
+  aspect-ratio: 4/3;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+.works-article__img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.5s linear;
+}
+.works-article__img:hover {
+  transform: scale(1.1);
+}
+.works-article__title {
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.works-article__excerpt {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.works .btn {
+  margin: 0 auto;
+}
+
+.section-about .contents-container {
+  background: #F9F6F0;
+  padding: 60px 40px;
+}
+.section-about .about-content__text {
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+.about-content__head {
+  margin-bottom: 20px;
+}
+.about-content__text {
+  font-size: 16px;
+}
+
+.column-left {
+  width: 50%;
+}
+
+.column-right {
+  width: 50%;
+}
+.column-right__photo {
+  width: 100%;
+}
+
+.section-space {
+  margin-top: 100px;
+  background-color: #F9F6F0;
+}
+
+.contact {
+  position: relative;
+  z-index: -2;
+  background: url(../img/footer.jpg) center center no-repeat;
+  width: 100%;
+  padding: 140px 0;
+  background-size: cover;
+}
+.contact:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+.contact__message {
+  margin-bottom: 40px;
+  margin-right: 60px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: right;
+}
+.contact .btn {
+  margin: 0 auto;
+  margin-right: 120px;
 }
 /*# sourceMappingURL=style.css.map */

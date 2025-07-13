@@ -1,0 +1,51 @@
+.section-head {
+  margin-bottom: 96px;
+}
+.section-head__ja {
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: 600;
+}
+.section-head--brown {
+  color: #635058;
+}
+.section-head__bule {
+  color: #06344F;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+}
+
+.fa-instagram {
+  font-size: 24px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 4px;
+       column-gap: 4px;
+  height: 48px;
+  width: 212px;
+  border-radius: 4px;
+  font-family: "Noto Sans JP";
+}
+.btn .fa-envelope {
+  margin-top: 2px;
+  font-size: 16px;
+}
+.btn--fill {
+  background-color: #06344F;
+  color: #F8D6BD;
+}
+.btn--stroke {
+  border: 1px solid #06344F;
+  background-color: #F9F6F0;
+  color: #F8D6BD;
+}
+/*# sourceMappingURL=modules.css.map */

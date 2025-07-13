@@ -1,0 +1,60 @@
+@use 'variables' as*;
+
+.section-head{
+    margin-bottom: 96px;
+    &__ja{
+        margin-bottom: 16px;
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    &--brown{
+        color: $textColor2;
+    }
+
+    &__bule{
+        color: $mainColor1;
+    }
+}
+
+.nav{
+    &-menu{
+        display: flex;
+        align-items: center;
+        column-gap: 32px;
+    }
+}
+
+.fa-instagram{
+    font-size: 24px;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 4px;
+    height: 48px;
+    width: 212px;
+    border-radius: 4px;
+
+    font-family: $sans;
+
+    .fa-envelope{
+        margin-top: 2px;
+        font-size: 16px;
+    }
+
+    &--fill{
+        background-color: $mainColor1;
+        color: $textColor3;
+    }
+
+    &--stroke{
+        border: 1px solid $mainColor1;
+        background-color: $baseColor1;
+        color: $mainColor1;
+        font-size: 24px;
+    }
+}
+
